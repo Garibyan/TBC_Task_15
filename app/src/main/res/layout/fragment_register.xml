@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".screens.registerscreen.RegisterFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/top_left_corner"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        style="@style/title_style"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/register_image"
+        app:layout_constraintBottom_toTopOf="@+id/emailLayout"
+        app:layout_constraintEnd_toEndOf="@+id/emailLayout"
+        app:layout_constraintStart_toStartOf="@+id/emailLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        style="@style/input_layout_style"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/light_purple_corners"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/usernameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_email_24" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEmail"
+            style="@style/edtText_style"
+            android:background="@null"
+            android:hint="@string/email" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/usernameLayout"
+        style="@style/input_layout_style"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/light_purple_corners"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_username_24" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUsername"
+            style="@style/edtText_style"
+            android:background="@null"
+            android:hint="@string/username" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        style="@style/input_layout_style"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/light_purple_corners"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_password_24" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPassword"
+            style="@style/edtText_style"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnPasswordVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_visibility_off_24" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        style="@style/btn_style"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/purple_corners"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_left_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

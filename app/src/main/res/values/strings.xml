@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TBC_Tasc_15</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="welcome">Welcome</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="successfully_login">Successful Login</string>
+    <string name="network_error">Check network connection</string>
+    <string name="wrong_credentials">Wrong Credentials</string>
+    <string name="empty_email">Email can not be empty</string>
+    <string name="empty_password">Password can not be empty</string>
+    <string name="incorrect_email">Wrong email</string>
+    <string name="successful_registration">Registered successfully</string>
+    <string name="congratulations">Congratulations!!</string>
+</resources>
