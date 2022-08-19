@@ -11,10 +11,9 @@ import com.garibyan.armen.tbc_tasc_15.databinding.FragmentHomeBinding
 import com.garibyan.armen.tbc_tasc_15.screens.BaseFragment
 import kotlinx.coroutines.launch
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(
-    FragmentHomeBinding::inflate
+class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
+    FragmentHomeBinding::inflate, HomeViewModel::class.java
 ) {
-    private val viewModel: HomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

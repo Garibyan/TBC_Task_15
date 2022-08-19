@@ -11,11 +11,10 @@ import com.garibyan.armen.tbc_tasc_15.databinding.FragmentWelcomeBinding
 import com.garibyan.armen.tbc_tasc_15.screens.BaseFragment
 import kotlinx.coroutines.launch
 
-class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>(
-    FragmentWelcomeBinding::inflate
+class WelcomeFragment : BaseFragment<FragmentWelcomeBinding, WelcomeViewModel>(
+    FragmentWelcomeBinding::inflate, WelcomeViewModel::class.java
 ) {
 
-    private val viewModel: WelcomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

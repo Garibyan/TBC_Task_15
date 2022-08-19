@@ -18,11 +18,10 @@ import com.garibyan.armen.tbc_tasc_15.screens.BaseFragment
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class LoginFragment : BaseFragment<FragmentLoginBinding>(
-    FragmentLoginBinding::inflate
+class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
+    FragmentLoginBinding::inflate, LoginViewModel::class.java
 ) {
 
-    private val viewModel: LoginViewModel by viewModels()
     private var isPasswordVisible = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
