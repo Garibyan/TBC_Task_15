@@ -51,6 +51,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(
                 viewModel.loginState.collectLatest {
                     when (it) {
                         is Resource.Success -> {
+                            dataStoreRepository.saveToken(it.value.token.toString())
                             successfulState()
                         }
                         is Resource.Error -> {

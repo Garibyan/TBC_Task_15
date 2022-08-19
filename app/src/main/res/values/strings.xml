@@ -15,4 +15,5 @@
     <string name="incorrect_email">Wrong email</string>
     <string name="successful_registration">Registered successfully</string>
     <string name="congratulations">Congratulations!!</string>
+    <string name="log_out">Log Out</string>
 </resources>
